@@ -48,3 +48,14 @@
    ```bash
    serverless config credentials --provider aws --key YOUR_KEY --secret YOUR_SECRET
    ``` 
+   
+## adding node moules to you function
+
+### aws-sdk
+
+should be installed with *npm install --save-dev aws-sdk* to not be bundled to your lambda function on deploy
+
+### other node modules
+
+should be installed with *npm install -save NODE_MODULE_NAME*, they will get bundled by typescript/webpack
+just import the elements you really need into your code, this will help to reduce the generated lambda function size on deploy
