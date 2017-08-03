@@ -5,7 +5,7 @@
   "main": "handler.js",
   "scripts": {
     "lint": "tslint src/*.ts",
-    "test": "npm run lint && sls webpack invoke -f hello -p event.json",
+    "test": "npm run lint && sls webpack invoke -f handler -p event.json",
     "deploy": "sls deploy"
   },
   "author": "Bastian Meier",

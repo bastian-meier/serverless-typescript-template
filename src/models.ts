@@ -4,6 +4,7 @@ export interface IResponsePayload {
 
 export interface IEventPayload {
     example: boolean;
+    trash: any;
 }
 
 export interface ICallback {
