@@ -1,0 +1,22 @@
+{
+  "name": "serverless-typescript-template",
+  "version": "1.0.0",
+  "description": "Template for Serverless and TypeScript",
+  "main": "src/index.ts",
+  "scripts": {
+    "lint": "tslint src/*.ts",
+    "test": "npm run lint && sls webpack invoke -f handler -p event.json",
+    "deploy": "sls deploy"
+  },
+  "author": "Bastian Meier",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^8.0.19",
+    "serverless": "^1.19.0",
+    "serverless-webpack": "^2.2.0",
+    "ts-loader": "^2.3.2",
+    "tslint": "^5.5.0",
+    "typescript": "^2.0.3",
+    "webpack": "^1.13.2"
+  }
+}
