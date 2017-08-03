@@ -10,4 +10,4 @@ plugins:
 
 functions:
   handler:
-    handler: index.handler
+    handler: src/index.handler

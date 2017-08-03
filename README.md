@@ -6,7 +6,7 @@
 
    Type definitions for our lambda function
    
-* src/index.ts
+* src/handler.ts
 
    Entry Point of our lambda function
    

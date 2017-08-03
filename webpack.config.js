@@ -1,19 +1,17 @@
 var path = require('path');
+const slsw = require('serverless-webpack');
 
 module.exports = {
-	entry: './src/index.ts',
-	target: 'node',
-	module: {
-		loaders: [
-			{test: /\.ts(x?)$/, loader: 'ts-loader'}
-		]
-	},
-	resolve: {
-		extensions: ['.ts', '.js', '.tsx', '.jsx', '']
-	},
+	entry: slsw.lib.entries,
 	output: {
 		libraryTarget: 'commonjs',
 		path: path.join(__dirname, '.webpack'),
-		filename: 'index.js'
+		filename: '[name].js'
+	},
+	target: 'node',
+	module: {
+		loaders: [
+			{ test: /\.ts(x?)$/, loader: 'ts-loader' }
+		]
 	}
 };
