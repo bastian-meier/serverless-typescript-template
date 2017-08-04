@@ -1,4 +1,4 @@
-import { IResponsePayload } from './models';
+import { IResponsePayload } from './interfaces';
 
 export class ErrorResponse extends Error implements IResponsePayload {
     success = false;

@@ -5,6 +5,6 @@ export function handler(event: IEventPayload, context, callback: ICallback) {
     if (event.example) {
         callback(undefined, new SuccessResponse('successfull'));
     } else {
-        callback(undefined, new ErrorResponse({code: 12, message: 'your error message for example'}));
+        callback(undefined, new ErrorResponse({code: 12, message: 'your ERROR_MESSAGE for example'}));
     }
 }

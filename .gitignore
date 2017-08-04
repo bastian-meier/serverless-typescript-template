@@ -2,6 +2,3 @@ node_modules
 .webpack
 .serverless
 .idea
-Würde .serverless/cloudformation-template-update-stack.json löschen
-Würde .serverless/serverless-state.json löschen
-Würde .serverless/serverless-typescript-template.zip löschen
