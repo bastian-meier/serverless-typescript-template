@@ -1,12 +1,10 @@
-import { ICallback, IEventPayload } from './models';
-import { ErrorResponse } from './resp';
-import { Test } from './test';
+import { ICallback, IEventPayload } from './interfaces';
+import { ErrorResponse, SuccessResponse } from './response';
 
 export function handler(event: IEventPayload, context, callback: ICallback) {
-    console.log(new Test('huhu'));
     if (event.example) {
-        callback(new ErrorResponse('event.example: ' + event.example));
+        callback(undefined, new SuccessResponse('successfull'));
     } else {
-        callback(new ErrorResponse('event.example: ' + event.example));
+        callback(undefined, new ErrorResponse({code: 12, message: 'your error message for example'}));
     }
 }
